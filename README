@@ -8,8 +8,8 @@ Example usage if shell.py is in the same directory as your fabfile.py
     import shell
     
     env.hosts = [
-         'host1.btrll.com',
-         'host2.btrll.com'
+         'host1.domain.com',
+         'host2.domain.com'
     ]
 
     @hosts('')
