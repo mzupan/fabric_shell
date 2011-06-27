@@ -1,0 +1,18 @@
+A very simple function to get a fabric shell. More to come when I have time for it. 
+
+Example usage if shell.py is in the same directory as your fabfile.py
+
+    from fabric.api import *
+    from fabric.decorators import hosts
+     
+    import shell
+    
+    env.hosts = [
+         'host1.btrll.com',
+         'host2.btrll.com'
+    ]
+
+    @hosts('')
+    def cmd():
+        shell.shell()
+    
