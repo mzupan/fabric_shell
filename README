@@ -27,14 +27,17 @@ Right now if you enter a command it will run it on the server and if you run .su
     [host1.domain.com] run: id
     [host1.domain.com] out: uid=1020(mzupan) gid=1020(mzupan) groups=1020(mzupan)
     [host1.domain.com] out: 
-    [host1.domain.com] run: id
-    [host1.domain.com] out: uid=1020(mzupan) gid=1020(mzupan) groups=1020(mzupan)
-    [host1.domain.com] out: 
-    fabric::> .sudo id
-    [host2.domain.com] run:  id
+    [host2.domain.com] run: id
     [host2.domain.com] out: uid=1020(mzupan) gid=1020(mzupan) groups=1020(mzupan)
     [host2.domain.com] out: 
-    [host2.domain.com] run:  id
-    [host2.domain.com] out: uid=1020(mzupan) gid=1020(mzupan) groups=1020(mzupan)
+    fabric::> .sudo id
+    [host1.domain.com] sudo:  id
+    [host1.domain.com] out: sudo password: 
+    [host1.domain.com] out: 
+    [host1.domain.com] out: uid=0(root) gid=0(root) groups=0(root)
+    [host1.domain.com] out: 
+    [host2.domain.com] sudo:  id
+    [host2.domain.com] out: sudo password:
+    [host2.domain.com] out: uid=0(root) gid=0(root) groups=0(root)
     [host2.domain.com] out: 
     fabric::> 
