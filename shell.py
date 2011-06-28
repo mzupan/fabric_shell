@@ -2,10 +2,24 @@ from fabric.decorators import hosts
 from fabric.context_managers import settings
 from fabric.api import *
 
+from Queue import Queue
+
+import threading
 import readline
 
 def shell():
     FabricShell().run()
+    
+class FabricShellThread(threading.Thread):
+    def __init__(self, host, cmd):
+        self.host = host
+        self.cmd = cmd
+        
+        threading.Thread.__init__(self)
+        
+    def run(self):
+        pass
+    
     
 class FabricShell(object):
     prompt = 'fabric::> '
