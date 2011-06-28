@@ -33,7 +33,7 @@ class FabricShell(object):
                 self.run_cmd(line)
 
 
-    def run_cmd(cmd, **kwargs):
+    def run_cmd(self, cmd, **kwargs):
         env.user = env.local_user
 
         for host in env.hosts:
